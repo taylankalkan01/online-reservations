@@ -7,5 +7,5 @@ const app = express();
 export function initRoutes(app) {
   app.use("/api/auth", loginRoutes);
   app.use("/api/auth", registerRoutes);
-  app.use("/check", (req, res) => res.json({message: 'Ok!'}));
+  app.use("/check", (req, res) => res.json({ message: "Ok!" }));
 }

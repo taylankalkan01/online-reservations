@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import moment from "moment";
 
+const Schema = mongoose.Schema;
+
 const userSchema = new mongoose.Schema(
   {
     firstName: { type: String, required: true },
@@ -19,10 +21,10 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     dateOfBirth: { type: String, required: true },
-    role: {
+    roles: {
       type: String,
-      default: "customer",
-      enum: ["customer", "admin", "employee"]
+      enum: ["customer", "admin", "employee"],
+      default: "customer"
     },
     createdAt: {
       type: String,
